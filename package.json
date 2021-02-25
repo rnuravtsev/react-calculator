@@ -1,0 +1,43 @@
+{
+  "name": "react-calculator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server",
+    "eslint": "eslint --ext .jsx --ext .js src/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rnuravtsev/react-calculator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rnuravtsev/react-calculator/issues"
+  },
+  "homepage": "https://github.com/rnuravtsev/react-calculator#readme",
+  "devDependencies": {
+    "@babel/core": "7.8.7",
+    "@babel/preset-env": "7.8.7",
+    "@babel/preset-react": "7.8.3",
+    "babel-loader": "8.1.0",
+    "eslint": "7.18.0",
+    "eslint-config-htmlacademy": "2.1.0",
+    "eslint-plugin-react": "7.22.0",
+    "eslint-plugin-react-hooks": "4.2.0",
+    "prettier": "2.2.1",
+    "webpack": "4.41.6",
+    "webpack-cli": "3.3.12",
+    "webpack-dev-server": "3.10.3"
+  },
+  "dependencies": {
+    "prop-types": "15.7.2",
+    "react": "16.14.0",
+    "react-dom": "16.14.0",
+    "react-router-dom": "5.2.0",
+    "styled-components": "5.2.1",
+    "styled-normalize": "8.0.7"
+  }
+}
