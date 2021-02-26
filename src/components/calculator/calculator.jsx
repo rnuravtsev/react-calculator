@@ -1,7 +1,7 @@
 import NumberButton from "../number-button/number-button";
 import Display from "../display/display";
 import CalculatorTitle from "../calculator-title/calculator-title";
-import ButtonsWrapper from "../buttons-wrapper/buttons-wrapper";
+import Keypad from "../keypad/keypad";
 import NumberButtonsWrapper from "../number-buttons-wrapper/number-buttons-wrapper";
 import ArithmeticButtonsWrapper from "../arithmetic-buttons-wrapper/arithmetic-buttons-wrapper";
 import ArithmeticButton from "../arithmetic-button/arithmetic-button";
@@ -16,60 +16,53 @@ const Calculator = () => {
   const arithmeticButtons = [`+`, `-`, `*`, `/`];
 
   const [number, setNumber] = React.useState(``);
-  const [prevNumber, setPrevNumber] = React.useState(``);
+  const [accum, setAccum] = React.useState(``);
   const [arithmeticOperation, setArithmeticOperation] = React.useState(``);
-  const [buttonDisabled, setButtonDisabled] = React.useState(false);
+
+  const handleNumberButtonClick = (value) => {
+    setNumber(`${number + value}`);
+  };
+
+  const handleArithmeticButtonClick = (value) => {
+    setArithmeticOperation(value);
+    setAccum(number);
+    setNumber(``);
+    calculate();
+  };
 
   const handleClearButtonClick = () => {
     setNumber(``);
-    setPrevNumber(``);
+    setAccum(``);
     setArithmeticOperation(``);
-    setButtonDisabled(false);
   };
 
   const handleBackButtonClick = () => {
     setNumber(number.slice(0, number.length - 1));
   };
 
-  const handleNegativeButtonClick = () => {
-    if (number < 0) {
-      setNumber(`${Math.sign(number) * number}`);
-    } else {
-      setNumber(`${Math.sign(number) * -number}`);
-    }
-  };
-
-  const handleNumberButtonClick = (value) => {
-    setNumber(`${(number + value)}`);
-    setButtonDisabled(false);
-  };
-
-  const handleArithmeticButtonClick = (value) => {
-    setArithmeticOperation(value);
-    setNumber(``);
-    setPrevNumber(number);
-  };
+  const handleNegativeButtonClick = () => (
+    number < 0 ? setNumber(`${Math.sign(number) * number}`) : setNumber(`${Math.sign(number) * -number}`)
+  );
 
   const calculate = () => {
-    if (number && prevNumber) {
+    if (number && accum) {
       switch (arithmeticOperation) {
         case `+`:
-          setPrevNumber(`${Math.round(`${(parseFloat(prevNumber) + parseFloat(number)) * 1000}`) / 1000}`);
+          setAccum(`${Math.round(`${(parseFloat(accum) + parseFloat(number)) * 1000}`) / 1000}`);
           break;
         case `-`:
-          setPrevNumber(`${Math.round(`${(parseFloat(prevNumber) - parseFloat(number)) * 1000}`) / 1000}`);
+          setAccum(`${Math.round(`${(parseFloat(accum) - parseFloat(number)) * 1000}`) / 1000}`);
           break;
         case `/`:
-          setPrevNumber(`${Math.round(`${(parseFloat(prevNumber) / parseFloat(number)) * 1000}`) / 1000}`);
+          setAccum(`${Math.round(`${(parseFloat(accum) / parseFloat(number)) * 1000}`) / 1000}`);
           break;
         case `*`:
-          setPrevNumber(`${Math.round(`${parseFloat(prevNumber) * parseFloat(number) * 1000}`) / 1000}`);
+          setAccum(`${Math.round(`${parseFloat(accum) * parseFloat(number) * 1000}`) / 1000}`);
           break;
         default:
           break;
       }
       setNumber(``);
-      setButtonDisabled(true);
     }
   };
 
@@ -77,24 +70,22 @@ const Calculator = () => {
     <>
       <CalculatorTitle>My Calculator v1.0</CalculatorTitle>
       <Display
-        total={number}
-        prevNumber={prevNumber}
+        number={number}
+        accum={accum}
         arithmeticOperation={arithmeticOperation}
       />
-      <ButtonsWrapper>
+      <Keypad>
         <FunctionalButtonsWrapper>
-          <ClearButton handleClearButtonClick={handleClearButtonClick} />
-          <BackButton handleBackButtonClick={handleBackButtonClick} />
-          <NegativeButton
-            handleNegativeButtonClick={handleNegativeButtonClick}
-          />
+          <ClearButton onClick={handleClearButtonClick} />
+          <BackButton onClick={handleBackButtonClick} />
+          <NegativeButton onClick={handleNegativeButtonClick} />
         </FunctionalButtonsWrapper>
         <NumberButtonsWrapper>
           {numberButtons.reverse().map((el, index) => (
             <NumberButton
               key={index}
               value={el}
-              handleNumberButtonClick={handleNumberButtonClick}
+              onNumberButtonClick={handleNumberButtonClick}
             />
           ))}
         </NumberButtonsWrapper>
@@ -103,13 +94,12 @@ const Calculator = () => {
             <ArithmeticButton
               key={index}
               value={el}
-              handleArithmeticButtonClick={handleArithmeticButtonClick}
-              buttonDisabled={buttonDisabled}
+              onArithmeticButtonClick={handleArithmeticButtonClick}
             />
           ))}
-          <EqualButton calculate={calculate} />
+          <EqualButton onClick={calculate}>=</EqualButton>
         </ArithmeticButtonsWrapper>
-      </ButtonsWrapper>
+      </Keypad>
     </>
   );
 };

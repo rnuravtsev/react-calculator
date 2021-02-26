@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const ButtonsWrapper = styled.div`
+const Keypad = styled.div`
   width: 50%;
   margin: 0 auto;
   display: grid;
@@ -12,4 +12,4 @@ const ButtonsWrapper = styled.div`
   
 `;
 
-export default ButtonsWrapper;
+export default Keypad;

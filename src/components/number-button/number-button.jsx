@@ -6,15 +6,15 @@ const ZeroButton = styled(Button)`
 `;
 
 const NumberButton = (props) => {
-  const { value, handleNumberButtonClick } = props;
+  const { value, onNumberButtonClick } = props;
   return (
     <>
       {value === 0 ? (
-        <ZeroButton onClick={() => handleNumberButtonClick(value)}>
+        <ZeroButton onClick={() => onNumberButtonClick(value)}>
           {value}
         </ZeroButton>
       ) : (
-        <Button onClick={() => handleNumberButtonClick(value)}>{value}</Button>
+        <Button onClick={() => onNumberButtonClick(value)}>{value}</Button>
       )}
     </>
   );
@@ -22,7 +22,7 @@ const NumberButton = (props) => {
 
 NumberButton.propTypes = {
   value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
-  handleNumberButtonClick: PropTypes.func.isRequired,
+  onNumberButtonClick: PropTypes.func.isRequired,
 };
 
 export default NumberButton;

@@ -10,20 +10,20 @@ const StyledDisplay = styled.div`
 `;
 
 const Display = (props) => {
-  const { total, prevNumber } = props;
+  const { number, accum } = props;
   return (
     <StyledDisplay>
-      {!total.length && !prevNumber ? `0` : total || prevNumber}
+      {!number.length && !accum ? `0` : number || accum}
     </StyledDisplay>
   );
 };
 
 Display.propTypes = {
-  total: PropTypes.oneOfType([
+  number: PropTypes.oneOfType([
     PropTypes.number,
     PropTypes.string
   ]).isRequired,
-  prevNumber: PropTypes.string,
+  accum: PropTypes.string,
   arithmeticOperation: PropTypes.string
 };
 

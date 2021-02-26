@@ -6,11 +6,10 @@ const StyledArithmeticButton = styled(Button)`
 `;
 
 const ArithmeticButton = (props) => {
-  const { value, handleArithmeticButtonClick, buttonDisabled } = props;
+  const { value, onArithmeticButtonClick } = props;
   return (
     <StyledArithmeticButton
-      disabled={buttonDisabled}
-      onClick={() => handleArithmeticButtonClick(value)}
+      onClick={() => onArithmeticButtonClick(value)}
     >
       {value}
     </StyledArithmeticButton>
@@ -19,8 +18,7 @@ const ArithmeticButton = (props) => {
 
 ArithmeticButton.propTypes = {
   value: PropTypes.string.isRequired,
-  handleArithmeticButtonClick: PropTypes.func.isRequired,
-  buttonDisabled: PropTypes.bool.isRequired,
+  onArithmeticButtonClick: PropTypes.func.isRequired,
 };
 
 export default ArithmeticButton;
