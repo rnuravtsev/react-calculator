@@ -1,16 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="6ed26660-70c1-4a8e-98b4-916e2c789c6c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.babelrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.eslintignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.eslintrc.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/app/app.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/global-styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/arithmetic-button/arithmetic-button.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/arithmetic-buttons-wrapper/arithmetic-buttons-wrapper.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/back-button/back-button.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/button/button.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/buttons-wrapper/buttons-wrapper.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/calculator-title/calculator-title.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/calculator-wrapper/calculator-wrapper.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/calculator/calculator.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/clear-button/clear-button.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/display/display.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/equal-button/equal-button.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/functional-buttons-wrapper/functional-buttons-wrapper.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/negative-button/negative-button.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/number-button/number-button.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/number-buttons-wrapper/number-buttons-wrapper.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/theme.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/app/app.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/app.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/global-styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/global-styles.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +36,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -40,15 +56,22 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -60,11 +83,29 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1614255094986</updated>
-      <workItem from="1614255096106" duration="1347000" />
+      <workItem from="1614255096106" duration="10522000" />
+      <workItem from="1614268732674" duration="11948000" />
+      <workItem from="1614287005138" duration="9416000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="673" y="304" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1614281117833">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="673" y="304" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1920.1057/-1879.23.1879.1057@0.23.1920.1057" timestamp="1614281117833" />
+    <state x="469" y="190" key="SettingsEditor" timestamp="1614260698535">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="469" y="190" key="SettingsEditor/0.23.1920.1057/-1878.23.1878.1057@0.23.1920.1057" timestamp="1614260698535" />
+    <state x="625" y="258" width="670" height="676" key="search.everywhere.popup" timestamp="1614297014917">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="625" y="258" width="670" height="676" key="search.everywhere.popup/0.23.1920.1057/-1878.23.1878.1057@0.23.1920.1057" timestamp="1614297014917" />
+    <state x="625" y="258" width="670" height="676" key="search.everywhere.popup/0.23.1920.1057/-1879.23.1879.1057@0.23.1920.1057" timestamp="1614285168981" />
+    <state x="625" y="258" width="670" height="676" key="search.everywhere.popup/0.23.1920.1057/-1880.23.1880.1057@0.23.1920.1057" timestamp="1614270528931" />
   </component>
 </project>
